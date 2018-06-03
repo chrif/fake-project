@@ -2,4 +2,7 @@ language: php
 
 sudo: false
 
-script: true
+script: ./phpunit.phar src --coverage-clover clover.xml
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash) -f clover.xml
