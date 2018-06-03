@@ -4,7 +4,7 @@ php:
 
 sudo: false
 
-script: ./phpunit.phar src --coverage-clover clover.xml
+script: ./phpunit.phar src --coverage-clover clover.xml --whitelist src
 
 after_success:
   - bash <(curl -s https://codecov.io/bash) -f clover.xml
