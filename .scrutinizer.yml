@@ -1,0 +1,9 @@
+build:
+    environment:
+        php:
+            version: 7.2
+    root_path: './'
+checks:
+    php:
+        code_rating: true
+        duplication: true
